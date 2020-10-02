@@ -1,24 +1,24 @@
 <template>
-  <div
-    id="app"
-    :class="{ 'theme-dark': isDarkMode, 'theme-light': !isDarkMode }"
-  >
-    <div class="header">
-      <NavBar
-        :nav-links="navLinks"
-        :is-dark-mode="isDarkMode"
-        @toggle-theme="toggleTheme"
-      />
-      <!-- <button @click="isDarkMode=!isDarkMode">
+	<div
+		id="app"
+		:class="{ 'theme-dark': isDarkMode, 'theme-light': !isDarkMode }"
+	>
+		<div class="header">
+			<NavBar
+				:nav-links="navLinks"
+				:is-dark-mode="isDarkMode"
+				@toggle-theme="toggleTheme"
+			/>
+			<!-- <button @click="isDarkMode=!isDarkMode">
         Mode
       </button> -->
-    </div>
-    <div class="main">
-      <router-view :key="path" />
-    </div>
-    <Footer :copyright-text="copyrightText" />
-    <ToastsManager />
-  </div>
+		</div>
+		<div class="main">
+			<router-view :key="path" />
+		</div>
+		<Footer :copyright-text="copyrightText" />
+		<ToastsManager />
+	</div>
 </template>
 
 <script>
@@ -59,6 +59,10 @@ export default {
 			{
 				text: 'Technologies',
 				path: '/tech',
+			},
+			{
+				text: 'Podcasts',
+				path: '/podcasts',
 			},
 		],
 		isDarkMode: false,
